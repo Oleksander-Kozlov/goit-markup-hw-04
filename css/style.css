@@ -315,6 +315,7 @@ body {
     background-position: center;
     background-color: var(--light);
     border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 .icon-strategy::before {
@@ -412,6 +413,23 @@ vertical-align: text-top;
     border-radius: 0px 0px 4px 4px;
 }
 
+/* customers section */
+.customers-list {
+    display: flex;
+
+}
+
+.customers-list .item {
+    outline: 3px solid greenyellow;
+    padding: 16px 32px;
+    margin-right: 24px;
+}
+
+.icon-customers {
+    background-color: var(--subtle-text);
+    outline: 3px solid rgb(146, 40, 207);
+}
+
 /* футер */
 .footers {
     padding-top: 100px;
@@ -467,13 +485,16 @@ vertical-align: text-top;
 .soc-list .item {
     /* justify-content: space-between; */
     margin-right: 16px;
+    height: 40px;
+    width: 40px;
+
 }
 
 .soc-link {
     text-decoration: none;
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
 
     background-color: var(--text);
