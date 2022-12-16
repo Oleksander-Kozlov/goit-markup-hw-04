@@ -191,7 +191,7 @@ body {
 .button {
     display: inline-block;
     border-radius: 4px;
-    border-color: 1px solid transparent;
+    border: 1px solid transparent;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-right: 32px;
@@ -205,15 +205,14 @@ body {
 }
 
 .button.primery {
-    border-radius: 4px;
-
     color: var(--hero-text-color);
     font-family: inherit;
     letter-spacing: 0.04em;
     font-size: 16px;
     line-height: 1.19;
     background: var(--primery-brand);
-    /* box-shadow: 0px 4px 4px rgba(201, 232, 26, 0.15); */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
     cursor: pointer;
 
 }
@@ -221,7 +220,6 @@ body {
 .button.primery:hover,
 .button.primery:focus {
     border-radius: 4px;
-
     background: var(--primery-brand);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
@@ -229,7 +227,6 @@ body {
 
 .button.primery:active {
     border-radius: 4px;
-
     background: #404BBF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
@@ -250,8 +247,6 @@ body {
     line-height: 1.5;
     letter-spacing: 0.04em;
     border: var(--accent);
-
-
     cursor: pointer;
     /* flex: none;
     order: 1;
@@ -261,7 +256,9 @@ body {
     border-color: var(--accent); */
 }
 
-.button.secondary:active {
+/* .button.secondary:active, */
+.button.secondary:hover,
+.button.secondary:focus {
     color: var(--hero-text-color);
     background: #4D5AE5;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -421,8 +418,6 @@ vertical-align: text-top;
 }
 
 .job-card .list {
-    display: flex;
-
     gap: 24px;
     flex-direction: row;
     justify-content: center;
@@ -451,11 +446,9 @@ vertical-align: text-top;
     height: 16px;
     fill: var(--light);
     /* background-repeat: no-repeat;*/
-
     /* background-position: center; */
     /* background-size: 100%; */
     /* background-color: darkgreen; */
-
     align-items: center;
 
 
@@ -488,6 +481,10 @@ vertical-align: text-top;
     box-sizing: border-box;
 }
 
+.customers-list .item:hover {
+    border: 1px solid var(--primery-brand);
+    border-radius: 4px;
+}
 
 .customers-list .icon-link {
     display: block;
@@ -506,7 +503,11 @@ vertical-align: text-top;
 }
 
 .icon-customers:hover {
-    fill: var(--primery-brand);
+    fill: currentColor;
+
+
+
+
 }
 
 /* футер */
@@ -560,8 +561,12 @@ vertical-align: text-top;
 
 .soc-list {
     display: flex;
-    gap: 16px;
+    gap: 24px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .soc-list .item {
     /* justify-content: space-between; */
@@ -574,23 +579,32 @@ vertical-align: text-top;
 
 .soc-link {
     text-decoration: none;
-    display: inline-block;
+    display: block;
     height: 100%;
     width: 100%;
     border-radius: 50%;
 
     background-color: var(--text);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20px;
 
+    background-size: 20px;
+    padding: 8px;
 }
 
 .soc-link:hover {
     background-color: #31D0AA;
 }
 
-.insta {
+.soc-link .icon {
+    width: 24px;
+    height: 24px;
+
+}
+
+.linkedin {
+    box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* .insta {
     background-image: url(../images/instagram-2.svg);
 }
 
@@ -604,18 +618,16 @@ vertical-align: text-top;
 
 .linkedin {
     background-image: url(../images/linkedin-footer-1.svg);
-}
+} 
 
-.soc-list .item:nth-child(4n) {
+/* .soc-list .item:nth-child(4n) {
     margin: 0;
-    /* background-color: tomato; */
-}
+    background-color: tomato; 
+ } */
 
 /* портфолио */
 .portfolio {
     padding-top: 96px;
-
-
 }
 
 .filtr-list {
@@ -643,6 +655,12 @@ vertical-align: text-top;
 
 .exemples-list .link {
     text-decoration: none;
+    display: block;
+}
+
+.exemples-list .link:hover {
+    border: 0.5px solid var(--light);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card {
